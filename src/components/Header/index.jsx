@@ -5,7 +5,7 @@ export default function Header() {
         <div  className="w-full h-[70px] bg-[#178080] flex items-center justify-between px-10">
             <h1 
             onClick={()=> window.location.href = "/"}
-            className="text-white text-2xl font-bold flex gap-2 cursor-pointer"><LuDumbbell/> Zero2Fit</h1>
+            className="text-white text-[30px] font-bold flex gap-2 cursor-pointer"><LuDumbbell/> Zero2Fit</h1>
             <nav className="flex space-x-6 font-semibold">
                 <a href="/" className="text-white hover:text-[#FF7F6A]">Home</a>
                 <a href="/FormularioImcGeb" className="text-white hover:text-[#FF7F6A]">Calculadora de IMC</a>
