@@ -19,11 +19,10 @@ export default function Exercise() {
         />{" "}
         <FaSearch className="w-[20%]" />
       </div>
-      <div className="card">
-        <h3 className="text-[#178080] text-[24px] font-bold">Exercício 1</h3>
-        <p className="text-[#178080] text-[16px] font-semibold">
-          Descrição do exercício 1
-        </p>
+      <div className="w-full h-full ">
+      
+        <h3 className="text-[#178080] text-[24px] font-bold pl-30 mt-8">Exercício 1</h3>
+        
       </div>
     </div>
   );
