@@ -1,3 +1,4 @@
+import Card from "@/components/Card";
 import Header from "@/components/Header";
 import { FaSearch } from "react-icons/fa";
 
@@ -11,7 +12,7 @@ export default function Exercise() {
       <p className="text-[#178080] text-[20px] font-semibold flex items-center justify-center">
         Baseado no seu IMC
       </p>
-      <div className="flex items-center w-[350px] h-[40px] mx-4 p-4 rounded-lg border border-[#178080] bg-white shadow-lg mt-4">
+      <div className="flex items-center w-[350px] h-[40px] mx-4 p-4 rounded-lg border border-[#178080] bg-white shadow-lg mt-4 ml-20">
         <input
           type="text"
           placeholder="Pesquisar exercícios"
@@ -19,8 +20,8 @@ export default function Exercise() {
         />{" "}
         <FaSearch className="w-[20%]" />
       </div>
-      <div className="w-full h-full ">
-      
+      <div className="w-full h-full ml-10 pt-10">
+        <Card />
         <h3 className="text-[#178080] text-[24px] font-bold pl-30 mt-8">Exercício 1</h3>
         
       </div>
