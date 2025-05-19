@@ -1,3 +1,5 @@
+import Header from "@/components/Header";
+import PageWrapper from "@/components/PageWrapper";
 import React, { useState, useEffect } from "react";
 
 export default function CalculadoraSaude() {
@@ -88,11 +90,14 @@ export default function CalculadoraSaude() {
     setCorFundo("bg-gray-100");
   };
 
+  
   return (
-    <section className=" bg-gradient-to-t from-[#FF7F6A] to-[#823f35]h-screen py-10">
+    <PageWrapper>
+     <section className=" flex gap-4 bg-gradient-to-t from-[#767373] to-[#151110]w-full h-screen">
       <div 
-        className={`max-w-md mx-auto p-6 rounded-2xl shadow-lg ${corFundo}`}
+        className={`max-w-1/2 max-h-auto p-6 rounded-2xl shadow-lg ${corFundo}`}
       >
+        
         <h2 className="text-2xl font-bold text-center mb-6">
           Calculadora de IMC e GEB
         </h2>
@@ -183,6 +188,39 @@ export default function CalculadoraSaude() {
           )}
         </div>
       </div>
+      <div className=" bg-amber-300 w-1/2 rounded">
+        <h1>Explicando</h1>
+        <p>O IMC (Índice de Massa Corporal) é uma medida utilizada para 
+          avaliar se uma pessoa está dentro 
+          do peso considerado saudável para sua altura. 
+          Ele é amplamente utilizado por profissionais de saúde 
+          como um indicativo geral da composição corporal, 
+          ajudando a identificar riscos associados ao baixo peso, 
+          sobrepeso e obesidade.
+        </p>
+
+          <p>Classificação do IMC
+            O IMC é dividido em categorias para facilitar a interpretação:
+          </p>
+
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>
+
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </section>
+    </PageWrapper>
   );
 }
