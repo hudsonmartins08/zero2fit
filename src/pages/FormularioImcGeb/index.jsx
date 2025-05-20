@@ -93,7 +93,7 @@ export default function CalculadoraSaude() {
   
   return (
     <PageWrapper>
-     <section className=" flex gap-4 bg-gradient-to-t from-[#767373] to-[#151110]w-full h-screen">
+     <section className=" flex gap-4 bg-gradient-to-t from-[#767373] to-[#151110]w-full h-screen m-8">
       <div 
         className={`max-w-1/2 max-h-auto p-6 rounded-2xl shadow-lg ${corFundo}`}
       >
@@ -188,7 +188,7 @@ export default function CalculadoraSaude() {
           )}
         </div>
       </div>
-      <div className=" bg-amber-300 w-1/2 rounded">
+      <div className="  w-1/2 rounded-2xl flex flex-col items-center justify-top text-[#FF7F6A] ">
         <h1>Explicando</h1>
         <p>O IMC (Índice de Massa Corporal) é uma medida utilizada para 
           avaliar se uma pessoa está dentro 
@@ -202,24 +202,30 @@ export default function CalculadoraSaude() {
           <p>Classificação do IMC
             O IMC é dividido em categorias para facilitar a interpretação:
           </p>
+            <ul> 
+              <li>Abaixo do peso: IMC menor que 18,5</li>
+              <li>Peso normal: IMC entre 18,5 e 24,9</li>
+              <li>Sobrepeso: IMC entre 25 e 29,9</li>
+              <li>Obesidade grau I: IMC entre 30 e 34,9</li>
+              <li>Obesidade grau II: IMC entre 35 e 39,9</li>
+              <li>Obesidade grau III (mórbida): IMC maior ou igual a 40</li>
+            </ul>
 
+            <p>
+              Imagine que o seu corpo é uma fábrica que nunca para de funcionar. Mesmo quando você está dormindo ou descansando, 
+              ele continua trabalhando para manter você vivo. O Gasto Energético Basal (GEB) é a quantidade de energia que essa 
+              fábrica precisa para fazer coisas muito importantes, como:
+              Manter o coração batendo 🫀
+              Fazer você respirar 😮‍💨
+              Manter seu corpo quentinho 🌡️
+              Deixar seu cérebro funcionando 🧠
+              Essa energia vem da comida que você come! É como se fosse o "combustível" 
+              para sua fábrica corporal. Quanto maior a fábrica (ou seja, o corpo da pessoa), mais energia ela precisa. Por isso, 
+              adultos gastam mais energia do que crianças, e pessoas com mais músculos precisam de mais combustível para manter tudo funcionando.
+              Dá para imaginar o GEB como a energia que um robô precisaria para continuar ligado, mesmo sem se mexer. Legal, né? 😃
+            </p>
       </div>
-      <table>
-        <thead>
-          <tr>
-            <th>
-
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              
-            </td>
-          </tr>
-        </tbody>
-      </table>
+          
     </section>
     </PageWrapper>
   );
