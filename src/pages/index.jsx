@@ -1,5 +1,8 @@
 import { FaArrowRight } from "react-icons/fa6";
 import { LuCalculator } from "react-icons/lu";
+import { LuDumbbell } from "react-icons/lu";
+import { LuLeafyGreen } from "react-icons/lu";
+import { FiMapPin } from "react-icons/fi";
 
 export default function Home() {
   return (
@@ -18,7 +21,7 @@ export default function Home() {
           <h1 className="w-[65%] text-[50px] text-white font-bold p-8">
             Comece aqui sua jornada fitness com a Zero2Fit
           </h1>
-          <h2 className="w-[60%] text-[20px] text-white font-semibold pl-8">
+          <h2 className="w-[60%] text-[20px] text-white font-semibold pl-8 pb-6">
             Planos de treino personalizados, conselhos nutricionais e recursos
             de condicionamento físico para ajudá-lo a atingir seus objetivos de
             saúde.
@@ -31,25 +34,70 @@ export default function Home() {
       </div>
       <div className="w-screen h-screen flex flex-wrap items-center justify-center bg-[#f9fafb]">
         <div className=" w-full h-[20%] flex items-center justify-center">
-          <h2 className="text-[#178080] text-[40px] font-bold">
+          <h2 className="text-[#178080] text-[30px] font-bold">
             Como o Zero2Fit ajuda você
           </h2>
         </div>
-        <div className="w-full h-[80%] flex items-center justify-center">
-            <div className="w-[280px] h-[280px] bg-[#ffffff] shadow-lg transition-shadow rounded-md flex flex-col items-center justify-center">
+        <div className="w-full h-[80%] flex flex-wrap items-center justify-center gap-10 ">
+            <div className="w-[310px] h-[310px] bg-[#ffffff] shadow-lg transition-shadow rounded-lg flex flex-col items-center justify-center">
               <div className="w-full h-[33%] flex items-center justify-center text-[#178080]">
                 <div className="w-[70px] h-[70px] rounded-full bg-[#e7f4f4] flex items-center justify-center "><LuCalculator size={40} /></div>
               </div>
-              <div className="w-full h-[34%] flex flex-wrap justify-center">
-                <h4 className="font-bold size-[20px]">Calculadora de IMC</h4>
-                <h5>Entenda sua composição corporal e obtenha recomendações personalizadas</h5>
+              <div className="w-full h-[34%] flex flex-col items-center justify-center">
+                <h4 className="w-full font-bold size-[20px] text-center">Calculadora de IMC</h4>
+                <p className="w-full text-center mt-2">Entenda sua composição corporal e obtenha recomendações personalizadas.</p>
               </div>
-              <div className="w-full h-[33%] bg-[blue]">
-                <button></button>
+              <div className="w-full h-[33%] flex items-center justify-center">
+                <button className="border border-[#e2e8f0] rounded-md py-2 px-3 hover:bg-[#178080] hover:text-white ">Calcular IMC</button>
+            </div>
+              </div>
+              <div className="w-[310px] h-[310px] bg-[#ffffff] shadow-lg transition-shadow rounded-lg flex flex-col items-center justify-center">
+              <div className="w-full h-[33%] flex items-center justify-center text-[#178080]">
+                <div className="w-[70px] h-[70px] rounded-full bg-[#e7f4f4] flex items-center justify-center "><LuDumbbell size={40} /></div>
+              </div>
+              <div className="w-full h-[34%] flex flex-col items-center justify-center">
+                <h4 className="w-full font-bold size-[20px] text-center">Planos de Exercício</h4>
+                <p className="w-full text-center mt-2 pl-2 pr-2">Rotinas de treino personalizadas com base no seu nível de condicionamento físico e objetivos.</p>
+              </div>
+              <div className="w-full h-[33%] flex items-center justify-center">
+                <button className="border border-[#e2e8f0] rounded-md py-2 px-3 hover:bg-[#178080] hover:text-white ">Ver exercícios</button>
+              </div>
+            </div>
+            <div className="w-[310px] h-[310px] bg-[#ffffff] shadow-lg transition-shadow rounded-lg flex flex-col items-center justify-center">
+              <div className="w-full h-[33%] flex items-center justify-center text-[#178080]">
+                <div className="w-[70px] h-[70px] rounded-full bg-[#e7f4f4] flex items-center justify-center "><LuLeafyGreen size={40} /></div>
+              </div>
+              <div className="w-full h-[34%] flex flex-col items-center justify-center">
+                <h4 className="w-full font-bold size-[20px] text-center">Recomendações de dieta</h4>
+                <p className="w-full text-center mt-2 pl-2 pr-2">Planos de nutrição personalizados com macros detalhadas para seus objetivos.</p>
+              </div>
+              <div className="w-full h-[33%] flex items-center justify-center">
+                <button className="border border-[#e2e8f0] rounded-md py-2 px-3 hover:bg-[#178080] hover:text-white ">Explore os planos de dieta</button>
+              </div>
+            </div>
+            <div className="w-[310px] h-[310px] bg-[#ffffff] shadow-lg transition-shadow rounded-lg flex flex-col items-center justify-center">
+              <div className="w-full h-[33%] flex items-center justify-center text-[#178080]">
+                <div className="w-[70px] h-[70px] rounded-full bg-[#e7f4f4] flex items-center justify-center "><FiMapPin size={40} /></div>
+              </div>
+              <div className="w-full h-[34%] flex flex-col items-center justify-center">
+                <h4 className="w-full font-bold size-[20px] text-center">Localizações Fitness</h4>
+                <p className="w-full text-center mt-2 pl-2 pr-2">Encontre academias, treinadores, lojas de suplementos e mais na sua área.</p>
+              </div>
+              <div className="w-full h-[33%] flex items-center justify-center">
+                <button className="border border-[#e2e8f0] rounded-md py-2 px-3 hover:bg-[#178080] hover:text-white ">Ver mapa</button>
               </div>
             </div>
         </div>
       </div>
+        <div className="w-screen flex items-center justify-center">
+          <div className="w-[60%] h-[30%] mt-16 rounded-lg bg-[#FF7F6A] text-white text-center mb-16">
+            <h4 className="p-8 text-[20px]">"Cuide do seu corpo. É o único lugar que você tem para viver."</h4>
+            <p className="pb-8 text-[20px]">-Jim Rohn</p>
+          </div>
+        </div>
+        <div className="w-full h-[55%] bg-[#1F2937]">
+          <div className=""></div>
+        </div>
     </div>
   );
 }
