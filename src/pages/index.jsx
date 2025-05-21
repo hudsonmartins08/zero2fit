@@ -148,22 +148,6 @@ export default function Home() {
                 <LuCalculator size={40} />
               </div>
             </div>
-            
-              <div className="w-full h-[34%] flex flex-col items-center justify-center">
-                <h4 className="w-full font-bold size-[20px] text-center">
-                  Calculadora de IMC
-                </h4>
-                <p className="w-full text-center mt-2">
-                  Entenda sua composição corporal e obtenha recomendações
-                  personalizadas.
-                </p>
-              </div>
-              <div className="w-full h-[33%] flex items-center justify-center">
-                {/*Link do Botão */}
-                <button className="border border-[#e2e8f0] rounded-md py-2 px-3 hover:bg-[#178080] hover:text-white ">
-                  Calcular IMC
-                </button>
-              </div>
               <div className="w-full h-[34%] flex flex-col items-center justify-center">
                 <h4 className="w-full font-bold size-[20px] text-center">
                   Calculadora de IMC
@@ -310,6 +294,6 @@ export default function Home() {
           </p>
         </div>
       </div>
-    </div>
+    
   );
 }
