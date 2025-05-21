@@ -1,12 +1,10 @@
-import Link from 'next/link';
+import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
 import { LuCalculator } from "react-icons/lu";
 import { LuDumbbell } from "react-icons/lu";
 import { LuLeafyGreen } from "react-icons/lu";
 import { FiMapPin } from "react-icons/fi";
 import { useState } from "react";
-
-
 
 export default function Home() {
   const [showAuthModal, setShowAuthModal] = useState(false);
@@ -39,7 +37,7 @@ export default function Home() {
             de condicionamento físico para ajudá-lo a atingir seus objetivos de
             saúde.
           </h2>
-          <button 
+          <button
             onClick={() => setShowAuthModal(true)}
             className="w-[250px] h-[50px] font-semibold flex items-center justify-center m-8 text-white border border-none gap-2 rounded-lg bg-[#FF7F6A] hover:bg-[#FF7F6A]/80"
           >
@@ -54,71 +52,79 @@ export default function Home() {
             <div className="w-full max-w-md bg-white rounded-lg shadow-xl overflow-hidden">
               <div className="p-8">
                 <h2 className="text-2xl font-bold text-gray-800 mb-6">
-                  {isLogin ? 'Acesse sua conta' : 'Crie sua conta'}
+                  {isLogin ? "Acesse sua conta" : "Crie sua conta"}
                 </h2>
-                
+
                 <form className="space-y-6">
                   {!isLogin && (
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">Nome completo</label>
-                      <input 
-                        type="text" 
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Nome completo
+                      </label>
+                      <input
+                        type="text"
                         className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#178080]"
                         placeholder="Seu nome"
                       />
                     </div>
                   )}
-                  
+
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
-                    <input 
-                      type="email" 
+                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                      E-mail
+                    </label>
+                    <input
+                      type="email"
                       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#178080]"
                       placeholder="seu@email.com"
                     />
                   </div>
-                  
+
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Senha</label>
-                    <input 
-                      type="password" 
+                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                      Senha
+                    </label>
+                    <input
+                      type="password"
                       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#178080]"
-                      placeholder={isLogin ? 'Sua senha' : 'Crie uma senha'}
+                      placeholder={isLogin ? "Sua senha" : "Crie uma senha"}
                     />
                   </div>
-                  
+
                   {!isLogin && (
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">Confirme sua senha</label>
-                      <input 
-                        type="password" 
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Confirme sua senha
+                      </label>
+                      <input
+                        type="password"
                         className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#178080]"
                         placeholder="Confirme sua senha"
                       />
                     </div>
                   )}
-                  
+
                   <div className="flex items-center justify-between">
-                    <button 
-                      type="button" 
+                    <button
+                      type="button"
                       onClick={() => setIsLogin(!isLogin)}
                       className="text-sm text-[#178080] hover:underline"
                     >
-                      {isLogin ? 'Criar uma conta' : 'Já tenho uma conta'}
+                      {isLogin ? "Criar uma conta" : "Já tenho uma conta"}
                     </button>
-                    
-                    <button 
-                      type="submit" 
+
+                    <button
+                      type="submit"
                       className="px-6 py-2 bg-[#FF7F6A] text-white rounded-md hover:bg-[#FF7F6A]/90 transition"
                     >
-                      {isLogin ? 'Entrar' : 'Cadastrar'}
+                      {isLogin ? "Entrar" : "Cadastrar"}
                     </button>
                   </div>
                 </form>
               </div>
-              
+
               <div className="bg-gray-50 px-8 py-4 flex justify-end">
-                <button 
+                <button
                   onClick={() => setShowAuthModal(false)}
                   className="text-sm text-gray-600 hover:text-gray-800"
                 >
@@ -141,29 +147,23 @@ export default function Home() {
               <div className="w-[70px] h-[70px] rounded-full bg-[#e7f4f4] flex items-center justify-center ">
                 <LuCalculator size={40} />
               </div>
+            </div>
+            
               <div className="w-full h-[34%] flex flex-col items-center justify-center">
-                <h4 className="w-full font-bold size-[20px] text-center">Calculadora de IMC</h4>
-                <p className="w-full text-center mt-2">Entenda sua composição corporal e obtenha recomendações personalizadas.</p>
+                <h4 className="w-full font-bold size-[20px] text-center">
+                  Calculadora de IMC
+                </h4>
+                <p className="w-full text-center mt-2">
+                  Entenda sua composição corporal e obtenha recomendações
+                  personalizadas.
+                </p>
               </div>
               <div className="w-full h-[33%] flex items-center justify-center">
-                 {/*Link do Botão */}
-                <button className="border border-[#e2e8f0] rounded-md py-2 px-3 hover:bg-[#178080] hover:text-white ">Calcular IMC</button>
-
-            </div>
-            <div className="w-full h-[34%] flex flex-col items-center justify-center">
-              <h4 className="w-full font-bold size-[20px] text-center">
-                Calculadora de IMC
-              </h4>
-              <p className="w-full text-center mt-2">
-                Entenda sua composição corporal e obtenha recomendações
-                personalizadas.
-              </p>
-            </div>
-            <div className="w-full h-[33%] flex items-center justify-center">
-              <button className="border border-[#e2e8f0] rounded-md py-2 px-3 hover:bg-[#178080] hover:text-white cursor-pointer">
-                Calcular IMC
-              </button>
-            </div>
+                <button className="border border-[#e2e8f0] rounded-md py-2 px-3 hover:bg-[#178080] hover:text-white">
+                  Calcular IMC
+                </button>
+              </div>
+            
           </div>
           <div className="w-[310px] h-[310px] bg-[#ffffff] shadow-lg transition-shadow rounded-lg flex flex-col items-center justify-center">
             <div className="w-full h-[33%] flex items-center justify-center text-[#178080]">
@@ -277,6 +277,5 @@ export default function Home() {
         </div>
       </div>
     </div>
-
   );
 }
