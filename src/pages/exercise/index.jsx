@@ -20,7 +20,7 @@ export default function Exercise() {
         />{" "}
         <FaSearch className="w-[20%]" />
       </div>
-      <div className="w-full h-auto min-h-screen flex flex-wrap gap-4 py-8">
+      <div className="w-full h-auto min-h-screen flex flex-wrap gap-4 py-8 items-center justify-center">
         <Card
           titulo={"Flexões"}
           categoria={"iniciante"}
