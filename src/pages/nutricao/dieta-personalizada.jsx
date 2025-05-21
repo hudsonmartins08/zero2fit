@@ -9,28 +9,25 @@ export default function DietaPersonalizada() {
   const [dadosUsuario, setDadosUsuario] = useState(null);
   const [planoNutricional, setPlanoNutricional] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [nivelAtividade, setNivelAtividade] = useState('moderado');
 
-  // Carrega os dados do localStorage quando o componente é montado
   useEffect(() => {
     const carregarDados = () => {
       const dadosSalvos = localStorage.getItem('dadosCalculadora');
       if (dadosSalvos) {
         const { imc, geb, classificacao, peso, altura, idade, sexo } = JSON.parse(dadosSalvos);
         setDadosUsuario({ imc, geb, classificacao, peso, altura, idade, sexo });
-        calcularPlanoNutricional(imc, geb, classificacao, sexo);
+        calcularPlanoNutricional(imc, geb, classificacao, sexo, nivelAtividade);
       } else {
-        // Redireciona se não houver dados
         router.push('/calculadora-imc');
       }
       setLoading(false);
     };
 
     carregarDados();
-  }, [router]);
+  }, [router, nivelAtividade]);
 
-  // Calcula o plano nutricional com base nos dados
-  const calcularPlanoNutricional = (imc, geb, classificacao, sexo) => {
-    // Fator de atividade física (pode ser ajustado conforme necessidade)
+  const calcularPlanoNutricional = (imc, geb, classificacao, sexo, atividade) => {
     const fatorAtividade = {
       sedentario: 1.2,
       leve: 1.375,
@@ -39,27 +36,28 @@ export default function DietaPersonalizada() {
       muitoIntenso: 1.9
     };
 
-    // Calcula necessidades calóricas diárias
-    const necessidadeCalorica = Math.round(geb * fatorAtividade.moderado);
+    const necessidadeCalorica = Math.round(geb * fatorAtividade[atividade]);
     
-    // Distribuição de macronutrientes baseada no IMC
     let distribuicaoMacros;
     if (classificacao.includes('Abaixo do peso')) {
       distribuicaoMacros = { carboidratos: 50, proteinas: 25, gorduras: 25 };
     } else if (classificacao.includes('Peso normal')) {
       distribuicaoMacros = { carboidratos: 45, proteinas: 30, gorduras: 25 };
     } else {
-      // Para sobrepeso e obesidade
       distribuicaoMacros = { carboidratos: 40, proteinas: 35, gorduras: 25 };
     }
 
-    // Sugestão de déficit/superávit calórico
+    // Ajuste para sexo feminino
+    if (sexo === 'feminino') {
+      distribuicaoMacros.proteinas += 5;
+      distribuicaoMacros.carboidratos -= 5;
+    }
+
     const ajusteCalorico = classificacao.includes('Abaixo do peso') ? 300 : 
                           classificacao.includes('Peso normal') ? 0 : -300;
 
     const caloriasDiarias = necessidadeCalorica + ajusteCalorico;
 
-    // Monta o plano nutricional
     const plano = {
       necessidadeCalorica,
       caloriasDiarias,
@@ -68,22 +66,18 @@ export default function DietaPersonalizada() {
       imc,
       geb,
       ajusteCalorico,
-      // Calcula gramas de cada macronutriente
       macrosGramas: {
         carboidratos: Math.round((caloriasDiarias * (distribuicaoMacros.carboidratos/100)) / 4),
         proteinas: Math.round((caloriasDiarias * (distribuicaoMacros.proteinas/100)) / 4),
-        gorduras: Math.round((caloriasDiarias * (distribuicaoMacros.gorduras/100)) / 9),
+        gorduras: Math.round((caloriasDiarias * (distribuicaoMacros.gorduras/100)) / 9)
       }
     };
 
     setPlanoNutricional(plano);
   };
 
-  // Exemplo de cardápio baseado nas necessidades
   const gerarCardapioExemplo = () => {
     if (!planoNutricional) return null;
-    
-    const { macrosGramas } = planoNutricional;
     
     return {
       cafeManha: {
@@ -167,6 +161,22 @@ export default function DietaPersonalizada() {
           </div>
         </div>
 
+        {/* Seletor de Nível de Atividade */}
+        <div className="bg-white rounded-xl shadow-md p-6 mb-8">
+          <h2 className="text-xl font-semibold mb-4 text-[#FF7F6A]">Seu Nível de Atividade</h2>
+          <select 
+            value={nivelAtividade}
+            onChange={(e) => setNivelAtividade(e.target.value)}
+            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#178080] focus:outline-none"
+          >
+            <option value="sedentario">Sedentário (pouco ou nenhum exercício)</option>
+            <option value="leve">Levemente ativo (exercício leve 1-3 dias/semana)</option>
+            <option value="moderado">Moderadamente ativo (exercício moderado 3-5 dias/semana)</option>
+            <option value="intenso">Muito ativo (exercício intenso 6-7 dias/semana)</option>
+            <option value="muitoIntenso">Extremamente ativo (exercício muito intenso e trabalho físico)</option>
+          </select>
+        </div>
+
         {/* Recomendações nutricionais */}
         {planoNutricional && (
           <>
@@ -174,7 +184,7 @@ export default function DietaPersonalizada() {
               <h2 className="text-xl font-semibold mb-4 text-[#FF7F6A]">Recomendações Calóricas</h2>
               
               <div className="mb-6">
-                <p className="mb-2">Seu gasto energético diário estimado (considerando atividade física moderada):</p>
+                <p className="mb-2">Seu gasto energético diário estimado:</p>
                 <p className="text-2xl font-bold text-[#178080]">{planoNutricional.necessidadeCalorica} kcal/dia</p>
               </div>
 
