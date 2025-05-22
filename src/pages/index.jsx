@@ -47,7 +47,7 @@ export default function Home() {
 
         {/* Modal de Login/Cadastro */}
         {showAuthModal && (
-          <div className="absolute inset-0 flex items-center justify-center bg-black/50">
+          <div className="fixed inset-0 flex items-center justify-center bg-black/50">
             <div className="w-full max-w-md bg-white rounded-lg shadow-xl overflow-hidden">
               <div className="p-8">
                 <h2 className="text-2xl font-bold text-gray-800 mb-6">
