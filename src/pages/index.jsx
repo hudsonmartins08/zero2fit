@@ -39,9 +39,8 @@ export default function Home() {
           </h2>
           <button
             onClick={() => setShowAuthModal(true)}
-            className="w-[250px] h-[50px] font-semibold flex items-center justify-center m-8 text-white border border-none gap-2 rounded-lg bg-[#FF7F6A] hover:bg-[#FF7F6A]/80"
-          >
-            Comece sua jornada
+            className="w-[250px] h-[50px] font-semibold flex items-center justify-center m-8 text-white border border-none gap-2 rounded-lg bg-[#FF7F6A] hover:bg-[#FF7F6A]/80 cursor-pointer"
+          >Comece sua jornada
             <FaArrowRight size={17} />
           </button>
         </div>
@@ -108,14 +107,14 @@ export default function Home() {
                     <button
                       type="button"
                       onClick={() => setIsLogin(!isLogin)}
-                      className="text-sm text-[#178080] hover:underline"
+                      className="text-sm text-[#178080] hover:underline cursor-pointer"
                     >
                       {isLogin ? "Criar uma conta" : "Já tenho uma conta"}
                     </button>
 
                     <button
                       type="submit"
-                      className="px-6 py-2 bg-[#FF7F6A] text-white rounded-md hover:bg-[#FF7F6A]/90 transition"
+                      className="px-6 py-2 bg-[#FF7F6A] text-white rounded-md hover:bg-[#FF7F6A]/90 transition cursor-pointer"
                     >
                       {isLogin ? "Entrar" : "Cadastrar"}
                     </button>
@@ -126,7 +125,7 @@ export default function Home() {
               <div className="bg-gray-50 px-8 py-4 flex justify-end">
                 <button
                   onClick={() => setShowAuthModal(false)}
-                  className="text-sm text-gray-600 hover:text-gray-800"
+                  className="text-sm text-gray-600 hover:text-gray-800 cursor-pointer"
                 >
                   Fechar
                 </button>
