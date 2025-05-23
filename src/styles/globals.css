@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @theme {
+  --color-cor-mamao:  "#FF7F6A";
   --animate-pulse-shadow: pulse-shadow 2s infinite;
   
 }
