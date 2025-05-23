@@ -4,7 +4,7 @@ import { FaSearch } from "react-icons/fa";
 
 export default function Exercise() {
   return (
-    <div className="w-full h-screen bg-[#f9fafb] ">
+    <div className=" w-full h-auto max-sm:w-full min-h-screen bg-[#f9fafb] ">
       <Header />
       <h1 className="text-[30px] font-bold text-[#178080] flex items-center justify-center pt-4">
         Exercícios recomendados
@@ -12,15 +12,17 @@ export default function Exercise() {
       <p className="text-[#178080] text-[20px] font-semibold flex items-center justify-center">
         Baseado no seu IMC
       </p>
-      <div className="flex items-center w-[350px] h-[40px] mx-4 p-4 rounded-lg border border-[#178080] bg-white shadow-lg mt-4 ml-20">
-        <input
-          type="text"
-          placeholder="Pesquisar exercícios"
-          className="outline-none rounded-lg w-[80%] "
-        />{" "}
-        <FaSearch className="w-[20%]" />
+      <div className="w-full flex items-center  max-md:justify-center">
+        <div className="flex items-center w-[350px] h-[40px] mx-4 p-4 rounded-lg border border-[#178080] bg-white shadow-lg mt-4 ml-20 max-md:ml-2 max-md:justify-center">
+          <input
+            type="text"
+            placeholder="Pesquisar exercícios"
+            className="outline-none rounded-lg w-[80%] "
+          />{" "}
+          <FaSearch className="w-[20%]" />
+        </div>
       </div>
-      <div className="w-full h-auto min-h-screen flex flex-wrap gap-4 py-8 items-center justify-center">
+      <div className="w-full h-auto min-h-screen max-sm:w-full flex flex-wrap gap-4 py-8 items-center justify-center">
         <Card
           titulo={"Flexões"}
           categoria={"iniciante"}

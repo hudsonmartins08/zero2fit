@@ -13,7 +13,7 @@ export default function Card({titulo, categoria, alvo, descricao,p1,p2,p3,p4 }) 
     }
 
   return (
-    <div className="w-[500px] h-[600px] flex ml-15  rounded-lg border border-[#178080] flex-col shadow-lg transition-shadow hover:shadow-2xl bg-white">
+    <div className="w-[500px] h-[600px] flex ml-15 max-md:mx-6 rounded-lg border border-[#178080] flex-col shadow-lg transition-shadow hover:shadow-2xl bg-white">
       <div className="w-[100%] h-[10%] items-center px-4 pt-4 flex justify-between rounded-t-lg">
         <p className="text-[25px] font-bold text-[#178080]">{titulo}</p>
         <div
