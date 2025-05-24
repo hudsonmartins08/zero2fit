@@ -79,21 +79,21 @@ export default function Localizacao() {
       <h1 className="text-[#178080] text-[35px] font-bold flex items-center justify-center pt-6 m-4 ">
         Encontre recursos fitness
       </h1>
-      <p className="flex items-center max-sm:text-[18px] justify-center font-semibold text-[18px]">
+      <p className="flex items-center max-md:text-[16px] max-md:m-6 justify-center font-semibold text-[18px]">
         Descubra academias, treinadores, lojas de fitness e nutricionistas em
         sua área.
       </p>
-      <div className="m-15 mr-45 max-md:w-100 ml-45 max-md:mx-0 mt-6 bg-gray-200 rounded-lg">
-        <div className="h-15 flex items-center justify-center  bg-[#178080] rounded-t-lg gap-2">
+      <div className="m-15 mr-45 max-md:w-100 ml-45 max-md:mx-0 mt-8 bg-gray-200 rounded-lg">
+        <div className="h-15 flex items-center justify-center max-md:m-3  bg-[#178080] rounded-t-lg gap-2">
           <IoLocationOutline
             size={35}
             className="text-white text-[25px] flex font-semibold pt-2"
           />
-          <h1 className="text-white text-[25px] flex font-semibold pt-2">
+          <h1 className="text-white text-[25px] max-sm:text-[22px] flex font-semibold pt-2">
             Recursos fitness perto de você
           </h1>
         </div>
-        <div className="w-full h-72 max-md:max-w-full flex items-center justify-center pt-4 bg-gray-200 rounded-b-lg">
+        <div className="w-full h-72 max-md:max-w-full max-md:p-4 flex items-center justify-center pt-4 bg-gray-200 rounded-b-lg">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d15925.356313163113!2d-38.516513155269564!3d-3.736083129608956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sacademias%20aldeota!5e0!3m2!1spt-BR!2sbr!4v1747924645366!5m2!1spt-BR!2sbr"
             width="1400"
