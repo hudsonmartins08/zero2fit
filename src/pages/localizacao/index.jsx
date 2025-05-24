@@ -74,16 +74,16 @@ export default function Localizacao() {
   ];
 
   return (
-    <div className=" w-full h-auto max-md:w-full min-h-screen bg-gray-100 ">
+    <div className=" w-full h-auto max-md:w-100 min-h-screen bg-gray-100 ">
       <Header />
       <h1 className="text-[#178080] text-[35px] font-bold flex items-center justify-center pt-6 m-4 ">
         Encontre recursos fitness
       </h1>
-      <p className="flex items-center justify-center font-semibold text-[20px]">
+      <p className="flex items-center max-sm:text-[18px] justify-center font-semibold text-[18px]">
         Descubra academias, treinadores, lojas de fitness e nutricionistas em
-        sua área
+        sua área.
       </p>
-      <div className="m-15 mr-45 max-md:w-full ml-45">
+      <div className="m-15 mr-45 max-md:w-100 ml-45 max-md:mx-0 mt-6 bg-gray-200 rounded-lg">
         <div className="h-15 flex items-center justify-center  bg-[#178080] rounded-t-lg gap-2">
           <IoLocationOutline
             size={35}
@@ -93,7 +93,7 @@ export default function Localizacao() {
             Recursos fitness perto de você
           </h1>
         </div>
-        <div className="w-full h-72 flex items-center justify-center pt-4 bg-gray-200 rounded-b-lg">
+        <div className="w-full h-72 max-md:max-w-full flex items-center justify-center pt-4 bg-gray-200 rounded-b-lg">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d15925.356313163113!2d-38.516513155269564!3d-3.736083129608956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sacademias%20aldeota!5e0!3m2!1spt-BR!2sbr!4v1747924645366!5m2!1spt-BR!2sbr"
             width="1400"
@@ -105,7 +105,7 @@ export default function Localizacao() {
           ></iframe>
         </div>
       </div>
-      <div className=" h-auto pt-4 mr-45 ml-45 pb-10 max-md:w-full  bg-gray-200 rounded-2xl">
+      <div className=" h-auto pt-4 mr-45 ml-45 pb-10 max-md:mx-0 max-md:w-full  bg-gray-200 rounded-2xl">
         <div className="relative w-[25%] ml-20"></div>
         <div className="flex justify-center  m-2 mt-4">
           <div className="w-full  items-center justify-center gap-2 flex flex-wrap max-md:flex-col">
@@ -199,7 +199,7 @@ export default function Localizacao() {
           </ul>
         )}
       </div>
-      <div className="h-full flex max-md:flex-col max-md:w-full items-center justify-between pt-2 mt-6 mr-45 ml-45 bg-gray-200 rounded-2xl">
+      <div className="h-full flex max-md:flex-col max-md:w-full max-md:mx-0 items-center justify-between pt-2 mt-6 mr-45 ml-45 bg-gray-200 rounded-2xl">
         <div className="m-4">
           <h1 className="text-[#178080] text-[35px] font-bold pt-6 m-1 ">
             Como escolher uma academia?
