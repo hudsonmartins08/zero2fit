@@ -427,27 +427,27 @@ export default function CalculadoraSaude() {
                   <h3 className="text-xl font-semibold mb-3 text-[#FF7F6A]">
                     Distribuição de Macronutrientes
                   </h3>
-                  <div className="grid grid-cols-3 gap-4 text-center">
-                    <div className="bg-blue-50 p-4 rounded-lg">
-                      <p className="font-bold text-blue-700">Carboidratos</p>
-                      <p>
+                  <div className="fle flex-cols-3 sm:flex-row gap-2 sm:gap-4 text-center">
+                    <div className="flex-1 bg-blue-50 p-3 sm:p-4 rounded-lg">
+                      <p className="font-bold text-sm sm:text-base text-blue-700">Carboidratos</p>
+                      <p className="text-sm sm:text-base">
                         {planoNutricional?.distribuicaoMacros.carboidratos}%
                       </p>
-                      <p className="font-semibold">
+                      <p className="font-semibold text-sm sm:text-base">
                         {planoNutricional?.macrosGramas.carboidratos}g
                       </p>
                     </div>
-                    <div className="bg-green-50 p-4 rounded-lg">
-                      <p className="font-bold text-green-700">Proteínas</p>
+                    <div className="flex-1 bg-green-50 p-3 sm:p-4 rounded-lg">
+                      <p className="font-bold text-sm sm:text-base text-green-700">Proteínas</p>
                       <p>{planoNutricional?.distribuicaoMacros.proteinas}%</p>
-                      <p className="font-semibold">
+                      <p className="text-sm sm:text-base font-semibold">
                         {planoNutricional?.macrosGramas.proteinas}g
                       </p>
                     </div>
                     <div className="bg-yellow-50 p-4 rounded-lg">
-                      <p className="font-bold text-yellow-700">Gorduras</p>
+                      <p className="font-bold text-sm sm:text text-yellow-700">Gorduras</p>
                       <p>{planoNutricional?.distribuicaoMacros.gorduras}%</p>
-                      <p className="font-semibold">
+                      <p className="text-sm sm:text-base font-semibold">
                         {planoNutricional?.macrosGramas.gorduras}g
                       </p>
                     </div>
