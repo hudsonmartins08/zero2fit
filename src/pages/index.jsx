@@ -12,7 +12,7 @@ export default function Home() {
 
   return (
     <div className="">
-      <div className="w-full h-screen flex items-center justify-center relative">
+      <div className="w-full h-screen flex items-center justify-center relative max-sm:w-full max-sm:h-[650px] ">
         {/* Video de fundo */}
         <video
           autoPlay
@@ -28,18 +28,18 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/30 -z-10"></div>
 
         {/* Conteúdo principal */}
-        <div className="w-[100%] h-screen flex flex-col items-start">
-          <h1 className="w-[65%] text-[50px] text-white font-bold p-8">
+        <div className="w-[100%] h-screen flex flex-col items-start max-sm:py-50">
+          <h1 className="w-[65%] text-[50px] text-white font-bold p-8 max-sm:text-[30px] max-sm:w-[100%]">
             Comece aqui sua jornada fitness com a Zero2Fit
           </h1>
-          <h2 className="w-[60%] text-[20px] text-white font-semibold pl-8 pb-6">
+          <h2 className="w-[60%] text-[20px] text-white font-semibold pl-8 pb-6 max-sm:text-[18px] max-sm:w-[90%]">
             Planos de treino personalizados, conselhos nutricionais e recursos
             de condicionamento físico para ajudá-lo a atingir seus objetivos de
             saúde.
           </h2>
           <button
             onClick={() => setShowAuthModal(true)}
-            className="w-[250px] h-[50px] font-semibold flex items-center justify-center m-8 text-white border border-none gap-2 rounded-lg bg-[#FF7F6A] hover:bg-[#FF7F6A]/80 cursor-pointer"
+            className="w-[250px] h-[50px] font-semibold flex items-center justify-center m-8 text-white border border-none gap-2 rounded-lg bg-[#FF7F6A] hover:bg-[#FF7F6A]/80 cursor-pointer max-sm:w-[80%] max-sm:gap-0.5 max-sm:p-1"
           >Comece sua jornada
             <FaArrowRight size={17} />
           </button>
@@ -135,13 +135,13 @@ export default function Home() {
         )}
       </div>
       <div className="w-screen h-screen flex flex-wrap items-center justify-center bg-[#f9fafb]">
-        <div className=" w-full h-[30%] flex items-center justify-center pt-10">
-          <h2 className="text-[#178080] text-[30px] font-bold">
+        <div className=" w-full h-[30%] flex items-center justify-center pt-10 max-sm:h-[5%] max-sm:pt-0">
+          <h2 className="text-[#178080] text-[30px] font-bold max-sm:text-[20px]">
             Como o Zero2Fit ajuda você
           </h2>
         </div>
-        <div className="w-full h-[70%] flex flex-wrap items-center justify-center gap-10 ">
-          <div className="w-[310px] h-[310px] bg-[#ffffff] shadow-lg transition-shadow rounded-lg flex flex-col items-center justify-center">
+        <div className="w-full h-[70%] flex flex-wrap items-center justify-center gap-10 max-sm:w-full max-sm:h-[100%] max-sm:gap-0">
+          <div className="w-[310px] h-[310px] bg-[#ffffff] shadow-lg transition-shadow rounded-lg flex flex-col items-center justify-center max-sm:w-[75%] max-sm:h-[23%]">
             <div className="w-full h-[33%] flex items-center justify-center text-[#178080]">
               <div className="w-[70px] h-[70px] rounded-full bg-[#e7f4f4] flex items-center justify-center ">
                 <LuCalculator size={40} />
@@ -165,7 +165,7 @@ export default function Home() {
               </button>
             </div>
           </div>
-          <div className="w-[310px] h-[310px] bg-[#ffffff] shadow-lg transition-shadow rounded-lg flex flex-col items-center justify-center">
+          <div className="w-[310px] h-[310px] bg-[#ffffff] shadow-lg transition-shadow rounded-lg flex flex-col items-center justify-center max-sm:w-[75%] max-sm:h-[23%]">
             <div className="w-full h-[33%] flex items-center justify-center text-[#178080]">
               <div className="w-[70px] h-[70px] rounded-full bg-[#e7f4f4] flex items-center justify-center ">
                 <LuDumbbell size={40} />
@@ -175,12 +175,12 @@ export default function Home() {
               <h4 className="w-full font-bold size-[20px] text-center">
                 Planos de Exercício
               </h4>
-              <p className="w-full text-center mt-2 pl-2 pr-2">
+              <p className="w-full text-center mt-2 pl-2 pr-2 max-sm:h-[90%]">
                 Rotinas de treino personalizadas com base no seu nível de
                 condicionamento físico e objetivos.
               </p>
             </div>
-            <div className="w-full h-[33%] flex items-center justify-center">
+            <div className="w-full h-[33%] flex items-center justify-center max-sm:pt-3">
               <button
                 onClick={() => (window.location.href = "/exercise")}
                 className="border border-[#e2e8f0] rounded-md py-2 px-3 hover:bg-[#178080] hover:text-white cursor-pointer"
@@ -189,7 +189,7 @@ export default function Home() {
               </button>
             </div>
           </div>
-          <div className="w-[310px] h-[310px] bg-[#ffffff] shadow-lg transition-shadow rounded-lg flex flex-col items-center justify-center">
+          <div className="w-[310px] h-[310px] bg-[#ffffff] shadow-lg transition-shadow rounded-lg flex flex-col items-center justify-center max-sm:w-[75%] max-sm:h-[23%]">
             <div className="w-full h-[33%] flex items-center justify-center text-[#178080]">
               <div className="w-[70px] h-[70px] rounded-full bg-[#e7f4f4] flex items-center justify-center ">
                 <LuLeafyGreen size={40} />
@@ -213,7 +213,7 @@ export default function Home() {
               </button>
             </div>
           </div>
-          <div className="w-[310px] h-[310px] bg-[#ffffff] shadow-lg transition-shadow rounded-lg flex flex-col items-center justify-center">
+          <div className="w-[310px] h-[310px] bg-[#ffffff] shadow-lg transition-shadow rounded-lg flex flex-col items-center justify-center max-sm:w-[75%] max-sm:h-[23%]">
             <div className="w-full h-[33%] flex items-center justify-center text-[#178080]">
               <div className="w-[70px] h-[70px] rounded-full bg-[#e7f4f4] flex items-center justify-center ">
                 <FiMapPin size={40} />
@@ -238,8 +238,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="w-screen flex items-center justify-center">
-        <div className="w-[60%] h-[30%] mt-16 rounded-lg bg-[#FF7F6A] text-white text-center mb-12">
+      <div className="w-screen flex items-center justify-center max-sm:bg-[#F9FAFB]">
+        <div className="w-[60%] h-[30%] mt-16 rounded-lg bg-[#FF7F6A] text-white text-center mb-12 max-sm:">
           <h4 className="p-8 text-[20px]">
             "Cuide do seu corpo. É o único lugar que você tem para viver."
           </h4>
@@ -247,101 +247,75 @@ export default function Home() {
         </div>
       </div>
       <footer>
-        <div className="w-full h-[55%] bg-[#1F2937] p-16 flex justify-between">
-          <div className="w-[40%] h-[15%] text-white">
-            <div className="flex gap-2">
-              <LuDumbbell size={30} />{" "}
-              <h2 className="font-bold text-[22px]">Zero2Fit</h2>
-            </div>
-            <p className="text-[#848C99] text-[17px] mt-2">
-              Sua jornada para uma vida mais saudável começa aqui.
-            </p>
-          </div>
-          <footer></footer>
-          <div className="w-[40%] h-[15%] pl-8 gap-4 flex">
-            <div className="w-[33%] h-[40%]">
-              <h4 className="text-white text-[20px]">Início</h4>
-              <div className="text-[#848C99]">
-                <p
-                  onClick={() => (window.location.href = "/FormularioImcGeb")}
-                  className="hover:text-[#FFFFFF] cursor-pointer"
-                >
-                  Calculadora de IMC
-                </p>
-                <p
-                  onClick={() => (window.location.href = "/exercise")}
-                  className="hover:text-[#FFFFFF] cursor-pointer"
-                >
-                  Exercício
-                </p>
-                <p
-                  onClick={() => (window.location.href = "/nutricao")}
-                  className="hover:text-[#FFFFFF] cursor-pointer"
-                >
-                  Nutrição
-                </p>
-                <p
-                  onClick={() => (window.location.href = "/localizacao")}
-                  className="hover:text-[#FFFFFF] cursor-pointer"
-                >
-                  Localização
-                </p>
-              </div>
-            </div>
-            <div className="w-[33%] h-[40%]">
-              <h4 className="text-white text-[20px]">Descubra</h4>
-              <div className="text-[#848C99]">
-                <p
-                  onClick={() => (window.location.href = "/#")}
-                  className="hover:text-[#FFFFFF] cursor-pointer"
-                >
-                  Blog
-                </p>
-                <p
-                  onClick={() => (window.location.href = "/#")}
-                  className="hover:text-[#FFFFFF] cursor-pointer"
-                >
-                  Artigos
-                </p>
-                <p
-                  onClick={() => (window.location.href = "/#")}
-                  className="hover:text-[#FFFFFF] cursor-pointer"
-                >
-                  Comunidade
-                </p>
-              </div>
-            </div>
-            <div className="w-[33%] h-[40%]">
-              <h4 className="text-white text-[20px]">Sobre</h4>
-              <div className="text-[#848C99]">
-                <p
-                  onClick={() => (window.location.href = "/#")}
-                  className="hover:text-[#FFFFFF] cursor-pointer"
-                >
-                  Missão
-                </p>
-                <p
-                  onClick={() => (window.location.href = "/#")}
-                  className="hover:text-[#FFFFFF] cursor-pointer"
-                >
-                  Contato
-                </p>
-                <p
-                  onClick={() => (window.location.href = "/#")}
-                  className="hover:text-[#FFFFFF] cursor-pointer"
-                >
-                  Privacidade
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="border-t border-gray-700 p-6 bg-[#1F2937]">
-          <p className="text-gray-400 text-sm text-center">
-            © {new Date().getFullYear()} Zero2Fit. Todos os direitos reservados.
+  <div className="w-full bg-[#1F2937] p-4 md:p-8 lg:p-16 flex flex-col md:flex-row justify-between">
+    <div className="w-full md:w-[40%] mb-8 md:mb-0 text-white">
+      <div className="flex gap-2 items-center">
+        <LuDumbbell size={30} />
+        <h2 className="font-bold text-lg md:text-[22px]">Zero2Fit</h2>
+      </div>
+      <p className="text-[#848C99] text-sm md:text-[17px] mt-2">
+        Sua jornada para uma vida mais saudável começa aqui.
+      </p>
+    </div>
+    
+    <div className="w-full md:w-[40%] flex flex-col sm:flex-row gap-8 md:gap-4 md:pl-8">
+      <div className="w-full sm:w-1/3">
+        <h4 className="text-white text-lg md:text-[20px]">Início</h4>
+        <div className="text-[#848C99] text-sm md:text-base">
+          <p onClick={() => (window.location.href = "/FormularioImcGeb")} className="hover:text-[#FFFFFF] cursor-pointer py-1">
+            Calculadora de IMC
+          </p>
+          <p onClick={() => (window.location.href = "/exercise")} className="hover:text-[#FFFFFF] cursor-pointer py-1">
+            Exercício
+          </p>
+          <p onClick={() => (window.location.href = "/nutricao")} className="hover:text-[#FFFFFF] cursor-pointer py-1">
+            Nutrição
+          </p>
+          <p onClick={() => (window.location.href = "/localizacao")} className="hover:text-[#FFFFFF] cursor-pointer py-1">
+            Localização
           </p>
         </div>
-      </footer>
+      </div>
+      
+      <div className="w-full sm:w-1/3">
+        <h4 className="text-white text-lg md:text-[20px]">Descubra</h4>
+        <div className="text-[#848C99] text-sm md:text-base">
+          <p onClick={() => (window.location.href = "/#")} className="hover:text-[#FFFFFF] cursor-pointer py-1">
+            Blog
+          </p>
+          <p onClick={() => (window.location.href = "/#")} className="hover:text-[#FFFFFF] cursor-pointer py-1">
+            Artigos
+          </p>
+          <p onClick={() => (window.location.href = "/#")} className="hover:text-[#FFFFFF] cursor-pointer py-1">
+            Comunidade
+          </p>
+        </div>
+      </div>
+      
+      <div className="w-full sm:w-1/3">
+        <h4 className="text-white text-lg md:text-[20px]">Sobre</h4>
+        <div className="text-[#848C99] text-sm md:text-base">
+          <p onClick={() => (window.location.href = "/#")} className="hover:text-[#FFFFFF] cursor-pointer py-1">
+            Missão
+          </p>
+          <p onClick={() => (window.location.href = "/#")} className="hover:text-[#FFFFFF] cursor-pointer py-1">
+            Contato
+          </p>
+          <p onClick={() => (window.location.href = "/#")} className="hover:text-[#FFFFFF] cursor-pointer py-1">
+            Privacidade
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div className="border-t border-gray-700 p-4 md:p-6 bg-[#1F2937]">
+    <p className="text-gray-400 text-xs md:text-sm text-center">
+      © {new Date().getFullYear()} Zero2Fit. Todos os direitos reservados.
+    </p>
+  </div>
+</footer>
+
     </div>
   );
 }
