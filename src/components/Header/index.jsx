@@ -4,8 +4,8 @@ import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 
 export default function Header() {
   return (
-    <div className="w-full h-[70px] bg-[#178080] flex items-center justify-between px-10">
-      <div className="flex items-center gap-2 h-full">
+    <div className="w-full h-[70px] max-sm:max-w-full bg-[#178080] flex items-center justify-between px-10">
+      <div className="flex items-center max-w-md gap-2 h-full">
         <LuDumbbell className="text-white text-[30px] cursor-pointer" />
         <h1
           onClick={() => (window.location.href = "/")}
@@ -37,29 +37,29 @@ export default function Header() {
           <MenuButton>
             <IoMdMenu size={25} />
           </MenuButton>
-          <MenuItems anchor="bottom" className="bg-gray-200 p-2 gap-2 rounded-lg shadow-lg flex flex-col font-semibold">
+          <MenuItems anchor="bottom" className="bg-gray-200 p-2 gap-3 rounded-lg shadow-lg flex flex-col font-semibold">
             <MenuItem>
-              <button className="border border-[#ff7f6a] rounded-lg hover:bg-[#178080] hover:text-white" onClick={() => (window.location.href = "/")}>Home</button>
+              <button className="shadow-lg rounded-lg hover:bg-[#178080] hover:text-white" onClick={() => (window.location.href = "/")}>Home</button>
             </MenuItem>
             <MenuItem>
-              <button className="border border-[#ff7f6a] rounded-lg hover:bg-[#178080] hover:text-white"
+              <button className="shadow-lg rounded-lg hover:bg-[#178080] hover:text-white"
                 onClick={() => (window.location.href = "/FormularioImcGeb")}
               >
                 Calc. de IMC
               </button >
             </MenuItem>
             <MenuItem>
-              <button className="border border-[#ff7f6a] rounded-lg hover:bg-[#178080] hover:text-white" onClick={() => (window.location.href = "/exercise")}>
+              <button className="shadow-lg rounded-lg hover:bg-[#178080] hover:text-white" onClick={() => (window.location.href = "/exercise")}>
                 Exercícios
               </button>
             </MenuItem>
             <MenuItem>
-              <button className="border border-[#ff7f6a] rounded-lg hover:bg-[#178080] hover:text-white" onClick={() => (window.location.href = "/nutricao")}>
+              <button className="shadow-lg rounded-lg hover:bg-[#178080] hover:text-white" onClick={() => (window.location.href = "/nutricao")}>
                 Nutrição
               </button>
             </MenuItem>
             <MenuItem>
-              <button className="border border-[#ff7f6a] rounded-lg hover:bg-[#178080] hover:text-white" onClick={() => (window.location.href = "/localizacao")}>
+              <button className="shadow-lg rounded-lg hover:bg-[#178080] hover:text-white" onClick={() => (window.location.href = "/localizacao")}>
                 Localização
               </button>
             </MenuItem>
