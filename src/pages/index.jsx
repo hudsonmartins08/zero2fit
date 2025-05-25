@@ -12,7 +12,7 @@ export default function Home() {
 
   return (
     <div className="">
-      <div className="w-full h-screen flex items-center justify-center relative max-sm:w-full max-sm:h-[650px] ">
+      <div className="w-full h-screen flex items-center justify-center relative max-sm:w-auto max-sm:min-h-[500px] ">
         {/* Video de fundo */}
         <video
           autoPlay
@@ -140,11 +140,11 @@ export default function Home() {
             Como o Zero2Fit ajuda você
           </h2>
         </div>
-        <div className="w-full h-[70%] flex flex-wrap items-center justify-center gap-10 max-sm:w-full max-sm:h-[100%] max-sm:gap-0">
+        <div className="w-full h-[70%] flex flex-wrap items-center justify-center gap-10 max-sm:w-full max-sm:h-[100%] max-sm:text-[11px] max-sm:gap-3">
           <div className="w-[310px] h-[310px] bg-[#ffffff] shadow-lg transition-shadow rounded-lg flex flex-col items-center justify-center max-sm:w-[75%] max-sm:h-[23%]">
             <div className="w-full h-[33%] flex items-center justify-center text-[#178080]">
-              <div className="w-[70px] h-[70px] rounded-full bg-[#e7f4f4] flex items-center justify-center ">
-                <LuCalculator size={40} />
+              <div className="w-[70px] h-[70px] max-md:h-[50px] max-md:w-[50px] rounded-full bg-[#e7f4f4] flex items-center justify-center ">
+                <LuCalculator className="max-sm:size-[25px]" size={40} />
               </div>
             </div>
             <div className="w-full h-[34%] flex flex-col items-center justify-center">
@@ -167,8 +167,8 @@ export default function Home() {
           </div>
           <div className="w-[310px] h-[310px] bg-[#ffffff] shadow-lg transition-shadow rounded-lg flex flex-col items-center justify-center max-sm:w-[75%] max-sm:h-[23%]">
             <div className="w-full h-[33%] flex items-center justify-center text-[#178080]">
-              <div className="w-[70px] h-[70px] rounded-full bg-[#e7f4f4] flex items-center justify-center ">
-                <LuDumbbell size={40} />
+              <div className="w-[70px] h-[70px] max-md:h-[50px] max-md:w-[50px] rounded-full bg-[#e7f4f4] flex items-center justify-center ">
+                <LuDumbbell className="max-sm:size-[25px]" size={40} />
               </div>
             </div>
             <div className="w-full h-[34%] flex flex-col items-center justify-center">
@@ -191,8 +191,8 @@ export default function Home() {
           </div>
           <div className="w-[310px] h-[310px] bg-[#ffffff] shadow-lg transition-shadow rounded-lg flex flex-col items-center justify-center max-sm:w-[75%] max-sm:h-[23%]">
             <div className="w-full h-[33%] flex items-center justify-center text-[#178080]">
-              <div className="w-[70px] h-[70px] rounded-full bg-[#e7f4f4] flex items-center justify-center ">
-                <LuLeafyGreen size={40} />
+              <div className="w-[70px] h-[70px] max-md:h-[50px] max-md:w-[50px] rounded-full bg-[#e7f4f4] flex items-center justify-center ">
+                <LuLeafyGreen className="max-sm:size-[25px]" size={40} />
               </div>
             </div>
             <div className="w-full h-[34%] flex flex-col items-center justify-center">
@@ -215,8 +215,8 @@ export default function Home() {
           </div>
           <div className="w-[310px] h-[310px] bg-[#ffffff] shadow-lg transition-shadow rounded-lg flex flex-col items-center justify-center max-sm:w-[75%] max-sm:h-[23%]">
             <div className="w-full h-[33%] flex items-center justify-center text-[#178080]">
-              <div className="w-[70px] h-[70px] rounded-full bg-[#e7f4f4] flex items-center justify-center ">
-                <FiMapPin size={40} />
+              <div className="w-[70px] h-[70px] max-md:h-[50px] max-md:w-[50px] rounded-full bg-[#e7f4f4] flex items-center justify-center ">
+                <FiMapPin className="max-sm:size-[25px]" size={40} />
               </div>
             </div>
             <div className="w-full h-[34%] flex flex-col items-center justify-center">
