@@ -78,21 +78,20 @@ export default function DietaPersonalizada() {
 
   const gerarCardapioExemplo = () => {
     if (!planoNutricional) return null;
-    
     return {
-      cafeManha: {
+      caféDaManhã: {
         descricao: "Omelete com 2 ovos + 1 fatia de pão integral + 1 fruta",
         nutrientes: "Proteínas: ~20g, Carboidratos: ~30g, Gorduras: ~10g"
       },
-      lancheManha: {
+      lancheDaManhã: {
         descricao: "Iogurte natural + 1 colher de chia + 5 castanhas",
         nutrientes: "Proteínas: ~10g, Carboidratos: ~15g, Gorduras: ~12g"
       },
-      almoco: {
+      almoço: {
         descricao: "100g de frango grelhado + 3 colheres de arroz integral + vegetais à vontade",
         nutrientes: "Proteínas: ~30g, Carboidratos: ~45g, Gorduras: ~8g"
       },
-      lancheTarde: {
+      lancheDaTarde: {
         descricao: "Smoothie de whey protein com banana e aveia",
         nutrientes: "Proteínas: ~25g, Carboidratos: ~40g, Gorduras: ~5g"
       },
