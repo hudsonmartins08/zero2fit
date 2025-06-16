@@ -5,10 +5,32 @@ import { LuDumbbell } from "react-icons/lu";
 import { LuLeafyGreen } from "react-icons/lu";
 import { FiMapPin } from "react-icons/fi";
 import { useState } from "react";
+import { instance } from "@/api/instance";
 
 export default function Home() {
   const [showAuthModal, setShowAuthModal] = useState(false);
   const [isLogin, setIsLogin] = useState(true);
+  const [nome, setNome] = useState("");
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+  const [confirmarSenha, setConfirmarSenha] = useState("");
+
+  async function handleSubmit(){
+    try {
+      const resposta = await instance.post('/users', {
+        name: nome,
+        email: email,
+        password: senha,
+      })
+      const data = await resposta.data;
+      if(data){
+        alert("Usuário cadastrado com sucesso!");
+      }
+    } catch (error) {
+      console.error("Erro ao enviar o formulário:", error);
+      
+    }
+  }
 
   return (
     <div className="">
@@ -61,6 +83,8 @@ export default function Home() {
                         Nome completo
                       </label>
                       <input
+                        value={nome}
+                        onChange={(e) => setNome(e.target.value)}
                         type="text"
                         className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#178080]"
                         placeholder="Seu nome"
@@ -73,6 +97,8 @@ export default function Home() {
                       E-mail
                     </label>
                     <input
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                       type="email"
                       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#178080]"
                       placeholder="seu@email.com"
@@ -84,6 +110,8 @@ export default function Home() {
                       Senha
                     </label>
                     <input
+                      value={senha}
+                      onChange={(e) => setSenha(e.target.value)}
                       type="password"
                       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#178080]"
                       placeholder={isLogin ? "Sua senha" : "Crie uma senha"}
@@ -96,6 +124,8 @@ export default function Home() {
                         Confirme sua senha
                       </label>
                       <input
+                        value={confirmarSenha}
+                        onChange={(e) => setConfirmarSenha(e.target.value)}
                         type="password"
                         className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#178080]"
                         placeholder="Confirme sua senha"
@@ -113,6 +143,7 @@ export default function Home() {
                     </button>
 
                     <button
+                      onClick={handleSubmit}
                       type="submit"
                       className="px-6 py-2 bg-[#FF7F6A] text-white rounded-md hover:bg-[#FF7F6A]/90 transition cursor-pointer"
                     >
